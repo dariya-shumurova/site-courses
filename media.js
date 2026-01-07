@@ -1,8 +1,8 @@
-duration = document.querySelector("#duration");
-current = document.querySelector("#current");
-playPause = document.querySelector("#playPause");
+const duration = document.querySelector("#duration");
+const current = document.querySelector("#current");
+const playPause = document.querySelector("#playPause");
 
-var timeCalculator = function (value) {
+const timeCalculator = function (value) {
     second = Math.floor(value % 60);
     minute = Math.floor((value / 60) % 60);
     
@@ -13,7 +13,7 @@ var timeCalculator = function (value) {
     return minute + ":" + second;
 };
 
-var wavesurfer = Object.create(WaveSurfer);
+const wavesurfer = Object.create(WaveSurfer);
 
 wavesurfer.init({
     container: "#wave",
